@@ -18,17 +18,45 @@ void AES(unsigned char in[16], unsigned char out[16], unsigned long w[44])
 	for (i = 0; i < 16; i++)
 	{
 		state[i] = in[i];
+		printf("%x", state[i]);
 	}
+	printf("\n");
 	for (i = 0; i < 4; i++)
 	{
 	 	temp[i] = w[i];
 	}
 	AddRoundKey(state, temp);
+	for (i = 0; i < 16; i++)
+	{
+		printf("%x", state[i]);
+	}
+	printf("\n");
 	for(j = 1; j < 10; j++)
 	{
 		SubBytes(state);
+		if (j == 1) {
+			for (i = 0; i < 16; i++)
+			{
+				printf("%x", state[i]);
+			}
+			printf("\n");
+		}
 		ShiftRows(state);
+		if (j == 1) {
+			for (i = 0; i < 16; i++)
+			{
+				printf("%x", state[i]);
+			}
+			printf("\n");
+		}
 		MixColumns(state);
+		if (j == 1) {
+			for (i = 0; i < 16; i++)
+			{
+				printf("%x", state[i]);
+			}
+			printf("\n");
+		}
 		for(k = 0; k < 4; k++)
 		{
 			temp[k] = w[j*4 + k];
@@ -56,10 +84,10 @@ void AddRoundKey(unsigned char state[16], unsigned long key[4])
 
 	for (i = 0; i < 4; i++)
 	{
-		state[i*4] ^= key[0] >> (24 - i * 8);
-		state[i*4+1] ^= key[1] >> (24 - i * 8);
-		state[i*4+2] ^= key[2] >> (24 - i * 8);
-		state[i*4+3] ^= key[3] >> (24 - i * 8);
+		state[i] ^= key[0] >> (24 - i * 8);
+		state[4+i] ^= key[1] >> (24 - i * 8);
+		state[8+i] ^= key[2] >> (24 - i * 8);
+		state[12+i] ^= key[3] >> (24 - i * 8);
 	}
 
 	/* for(i = 0; i < 4; i++)		//y for key, x for state
@@ -92,24 +120,24 @@ void ShiftRows(unsigned char state[16])
 	unsigned char temp;
 	unsigned char temp2;
 	//1 shift
-	temp = state[4];
-	state[4] = state[5];
-	state[5] = state[6];
-	state[6] = state[7];
-	state[7] = temp;
+	temp = state[1];
+	state[1] = state[5];
+	state[5] = state[9];
+	state[9] = state[13];
+	state[13] = temp;
 	//2 shift
-	temp = state[8];
-	temp2 = state[9];
-	state[8] = state[10];
-	state[9] = state[11];
+	temp = state[2];
+	temp2 = state[6];
+	state[2] = state[10];
+	state[6] = state[14];
 	state[10] = temp;
-	state[11] = temp2;
+	state[14] = temp2;
 	//3 shift
 	temp = state[15];
-	state[15] = state[14];
-	state[14] = state[13];
-	state[13] = state[12];
-	state[12] = temp;
+	state[15] = state[11];
+	state[11] = state[7];
+	state[7] = state[3];
+	state[3] = temp;
 }
 
 void MixColumns(unsigned char state[16])
@@ -117,28 +145,30 @@ void MixColumns(unsigned char state[16])
 	unsigned char a[4];
 	unsigned char c;
 	unsigned char i;
-for(i = 0; i < 4; i++) {
-	for(c=0;c<4;c++) {
-		a[c] = state[i*4+c];
+	for(i = 0; i < 4; i++) {
+		for(c=0;c<4;c++) {
+			a[c] = state[i*4+c];
 		}
-	state[i] = gmul(a[0],2) ^ gmul(a[3],1) ^ gmul(a[2],1) ^ gmul(a[1],3);
-	state[4+i] = gmul(a[1],2) ^ gmul(a[0],1) ^ gmul(a[3],1) ^ gmul(a[2],3);
-	state[8+i] = gmul(a[2],2) ^ gmul(a[1],1) ^ gmul(a[0],1) ^ gmul(a[3],3);
-	state[12+i] = gmul(a[3],2) ^ gmul(a[2],1) ^ gmul(a[1],1) ^ gmul(a[0],3);
-}
+		state[i*4] = gmul(a[0],2) ^ gmul(a[3],1) ^ gmul(a[2],1) ^ gmul(a[1],3);
+		state[i*4+1] = gmul(a[1],2) ^ gmul(a[0],1) ^ gmul(a[3],1) ^ gmul(a[2],3);
+		state[i*4+2] = gmul(a[2],2) ^ gmul(a[1],1) ^ gmul(a[0],1) ^ gmul(a[3],3);
+		state[i*4+3] = gmul(a[3],2) ^ gmul(a[2],1) ^ gmul(a[1],1) ^ gmul(a[0],3);
+	}
 
 }
 
 unsigned char gmul(unsigned char a, unsigned char b) {
 	unsigned char p = 0;
 	unsigned char counter;
+	unsigned char hi_bit_set;
 	for (counter = 0; counter < 8; counter++) {
-            if (b & 1)
-                p ^= a;
-            a <<= 1;
-            if (a & 0x100) /* detect if x^8 term is generated */
-                a ^= 0x11b; /* XOR with x^8 + x^4 + x^3 + x + 1 */
-            b >>= 1;
+		if ((b & 1) == 1)
+			p ^= a;
+		hi_bit_set = (a & 0x80);
+		a <<= 1;
+		if (hi_bit_set == 0x80)
+			a ^= 0x1b;
+		b >>= 1;
 	}
 	return p;
 }
