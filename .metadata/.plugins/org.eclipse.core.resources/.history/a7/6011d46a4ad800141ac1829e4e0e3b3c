@@ -1,0 +1,8 @@
+#include "AES.h"
+#include "keyexpansion.h"
+
+int main() {
+	int Nk = 4;
+	int Nb = 4;
+	return 0;
+}

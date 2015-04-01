@@ -1,0 +1,133 @@
+/*
+ * AES.c
+ *
+ *  Created on: Apr 1, 2015
+ *      Author: jwang118
+ */
+
+
+void AES(unsigned char in[16], unsigned char out[16], unsigned long w[44])
+{
+	unsigned char state[16];
+	state = in;
+	unsigned long temp[4];
+	int i, j, k;
+	for (i = 0; i < 4; i++)
+	{
+	 	temp[i] = w[i];
+	}
+	AddRoundKey(state, temp);
+	for(j = 1; j < 10; j++)
+	{
+		SubBytes(state);
+		ShiftRows(state);
+		MixColumns(state);
+		for(k = 0; k < 4; k++)
+		{
+			temp[k] = w[j*4 + k];
+		}
+		AddRoundKey(state, temp);
+	}
+	SubBytes(state);
+	ShiftRows(state);
+	for(k = 0; k < 4; k++)
+	{
+		temp[k] = w[40 + k];
+	}
+	AddRoundKey(state, temp);
+}
+
+void AddRoundKey(unsigned char state[16], unsigned long key[4])
+{
+	//long : 4 bytes, char : 1 byte
+	int i, j;
+	unsigned char temp;
+
+	for (i = 0; i < 4; i++)
+	{
+		state[i*4] ^= key[0] >> (24 - i * 8);
+		state[i*4+1] ^= key[1] >> (24 - i * 8);
+		state[i*4+2] ^= key[2] >> (24 - i * 8);
+		state[i*4+3] ^= key[3] >> (24 - i * 8);
+	}
+
+	/* for(i = 0; i < 4; i++)		//y for key, x for state
+{
+for(j = 0; j < 4; j++)	//x for key, y for state
+		{
+			temp = key[i] >> (24 - j*8);
+			state[j*4+i] = state [j*4+i] ^ temp;
+		}
+	} */
+}
+
+void SubBytes(unsigned char state[16])
+{
+	//length 16 array of byte chars
+	//hex values of byte -> row & column
+	unsigned char temp[16] = state;
+	unsigned char x, y;
+int i;
+	for(i = 0; i < 16; i++)
+	{
+	y = (temp[i]>> 4);
+x = temp[i] & 0x0F;
+state[i] = sbox[y*16 + x];
+}
+}
+
+void ShiftRows(unsigned char state[16])
+{
+	unsigned char temp;
+	unsigned char temp2;
+	//1 shift
+	temp = state[4];
+	state[4] = state[5];
+	state[5] = state[6];
+	state[6] = state[7];
+	state[7] = temp;
+	//2 shift
+	temp = state[8];
+	temp2 = state[9];
+	state[8] = state[10];
+	state[9] = state[11];
+	state[10] = temp;
+	state[11] = temp2;
+	//3 shift
+	temp = state[15];
+	state[15] = state[14];
+	state[14] = state[13];
+	state[13] = state[12];
+	state[12] = temp;
+}
+
+void MixColumns(unsigned char state[16])
+{
+	unsigned char a[4];
+	unsigned char c;
+	unsigned char i;
+for(i = 0; i < 4; i++) {
+	for(c=0;c<4;c++) {
+		a[c] = state[i*4+c];
+		}
+	state[i] = gmul(a[0],2) ^ gmul(a[3],1) ^ gmul(a[2],1) ^ gmul(a[1],3);
+	state[4+i] = gmul(a[1],2) ^ gmul(a[0],1) ^ gmul(a[3],1) ^ gmul(a[2],3);
+	state[8+i] = gmul(a[2],2) ^ gmul(a[1],1) ^ gmul(a[0],1) ^ gmul(a[3],3);
+	state[12+i] = gmul(a[3],2) ^ gmul(a[2],1) ^ gmul(a[1],1) ^ gmul(a[0],3);
+}
+
+}
+
+unsigned char gmul(unsigned char a, unsigned char b) {
+	unsigned char p = 0;
+	unsigned char counter;
+	for (counter = 0; counter < 8; counter++) {
+            if (b & 1)
+                p ^= a;
+            a <<= 1;
+            if (a & 0x100) /* detect if x^8 term is generated */
+                a ^= 0x11b; /* XOR with x^8 + x^4 + x^3 + x + 1 */
+            b >>= 1;
+	}
+	return p;
+}
