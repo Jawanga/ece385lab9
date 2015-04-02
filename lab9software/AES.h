@@ -14,5 +14,7 @@ void SubBytes(unsigned char state[16]);
 void MixColumns(unsigned char state[16]);
 void ShiftRows(unsigned char state[16]);
 unsigned char gmul(unsigned char a, unsigned char b);
+char charToHex(char c);
+char charsToHex(char c1, char c2);
 
 #endif /* AES_H_ */

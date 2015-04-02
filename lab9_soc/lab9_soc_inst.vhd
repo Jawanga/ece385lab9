@@ -13,9 +13,6 @@
 			sdram_wire_ras_n  : out   std_logic;                                        -- ras_n
 			sdram_wire_we_n   : out   std_logic;                                        -- we_n
 			sdram_clk_clk     : out   std_logic;                                        -- clk
-			sw_wire_export    : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
-			key_2_wire_export : in    std_logic                     := 'X';             -- export
-			key_3_wire_export : in    std_logic                     := 'X';             -- export
 			to_hw_port_export : out   std_logic_vector(7 downto 0);                     -- export
 			to_hw_sig_export  : out   std_logic_vector(1 downto 0);                     -- export
 			to_sw_port_export : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
@@ -38,9 +35,6 @@
 			sdram_wire_ras_n  => CONNECTED_TO_sdram_wire_ras_n,  --           .ras_n
 			sdram_wire_we_n   => CONNECTED_TO_sdram_wire_we_n,   --           .we_n
 			sdram_clk_clk     => CONNECTED_TO_sdram_clk_clk,     --  sdram_clk.clk
-			sw_wire_export    => CONNECTED_TO_sw_wire_export,    --    sw_wire.export
-			key_2_wire_export => CONNECTED_TO_key_2_wire_export, -- key_2_wire.export
-			key_3_wire_export => CONNECTED_TO_key_3_wire_export, -- key_3_wire.export
 			to_hw_port_export => CONNECTED_TO_to_hw_port_export, -- to_hw_port.export
 			to_hw_sig_export  => CONNECTED_TO_to_hw_sig_export,  --  to_hw_sig.export
 			to_sw_port_export => CONNECTED_TO_to_sw_port_export, -- to_sw_port.export

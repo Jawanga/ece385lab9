@@ -12,9 +12,6 @@
 		.sdram_wire_ras_n  (<connected-to-sdram_wire_ras_n>),  //           .ras_n
 		.sdram_wire_we_n   (<connected-to-sdram_wire_we_n>),   //           .we_n
 		.sdram_clk_clk     (<connected-to-sdram_clk_clk>),     //  sdram_clk.clk
-		.sw_wire_export    (<connected-to-sw_wire_export>),    //    sw_wire.export
-		.key_2_wire_export (<connected-to-key_2_wire_export>), // key_2_wire.export
-		.key_3_wire_export (<connected-to-key_3_wire_export>), // key_3_wire.export
 		.to_hw_port_export (<connected-to-to_hw_port_export>), // to_hw_port.export
 		.to_hw_sig_export  (<connected-to-to_hw_sig_export>),  //  to_hw_sig.export
 		.to_sw_port_export (<connected-to-to_sw_port_export>), // to_sw_port.export

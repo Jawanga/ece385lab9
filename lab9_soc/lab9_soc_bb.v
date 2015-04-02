@@ -13,9 +13,6 @@ module lab9_soc (
 	sdram_wire_ras_n,
 	sdram_wire_we_n,
 	sdram_clk_clk,
-	sw_wire_export,
-	key_2_wire_export,
-	key_3_wire_export,
 	to_hw_port_export,
 	to_hw_sig_export,
 	to_sw_port_export,
@@ -34,9 +31,6 @@ module lab9_soc (
 	output		sdram_wire_ras_n;
 	output		sdram_wire_we_n;
 	output		sdram_clk_clk;
-	input	[7:0]	sw_wire_export;
-	input		key_2_wire_export;
-	input		key_3_wire_export;
 	output	[7:0]	to_hw_port_export;
 	output	[1:0]	to_hw_sig_export;
 	input	[7:0]	to_sw_port_export;

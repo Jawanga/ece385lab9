@@ -18,22 +18,25 @@ void AES(unsigned char in[16], unsigned char out[16], unsigned long w[44])
 	for (i = 0; i < 16; i++)
 	{
 		state[i] = in[i];
-		printf("%x", state[i]);
+		//printf("%x", state[i]);
 	}
-	printf("\n");
+	//printf("\n");
 	for (i = 0; i < 4; i++)
 	{
 	 	temp[i] = w[i];
 	}
 	AddRoundKey(state, temp);
+	/*
 	for (i = 0; i < 16; i++)
 	{
 		printf("%x", state[i]);
 	}
 	printf("\n");
+	*/
 	for(j = 1; j < 10; j++)
 	{
 		SubBytes(state);
+		/*
 		if (j == 1) {
 			for (i = 0; i < 16; i++)
 			{
@@ -41,7 +44,9 @@ void AES(unsigned char in[16], unsigned char out[16], unsigned long w[44])
 			}
 			printf("\n");
 		}
+		*/
 		ShiftRows(state);
+		/*
 		if (j == 1) {
 			for (i = 0; i < 16; i++)
 			{
@@ -49,7 +54,9 @@ void AES(unsigned char in[16], unsigned char out[16], unsigned long w[44])
 			}
 			printf("\n");
 		}
+		*/
 		MixColumns(state);
+		/*
 		if (j == 1) {
 			for (i = 0; i < 16; i++)
 			{
@@ -57,6 +64,7 @@ void AES(unsigned char in[16], unsigned char out[16], unsigned long w[44])
 			}
 			printf("\n");
 		}
+		*/
 		for(k = 0; k < 4; k++)
 		{
 			temp[k] = w[j*4 + k];
@@ -106,13 +114,13 @@ void SubBytes(unsigned char state[16])
 	//hex values of byte -> row & column
 	//unsigned char temp[16] = state;
 	unsigned char x, y;
-int i;
+	int i;
 	for(i = 0; i < 16; i++)
 	{
-	y = (state[i]>> 4);
-x = state[i] & 0x0F;
-state[i] = fbox[y*16 + x];
-}
+		y = (state[i]>> 4);
+		x = state[i] & 0x0F;
+		state[i] = fbox[y*16 + x];
+	}
 }
 
 void ShiftRows(unsigned char state[16])
@@ -171,4 +179,30 @@ unsigned char gmul(unsigned char a, unsigned char b) {
 		b >>= 1;
 	}
 	return p;
+}
+
+char charToHex(char c)
+{
+	char hex = c;
+
+	if (hex >= '0' && hex <= '9')
+		hex -= '0';
+	else if (hex >= 'A' && hex <= 'F')
+	{
+		hex -= 'A';
+		hex += 10;
+	}
+	else if (hex >= 'a' && hex <= 'f')
+	{
+		hex -= 'a';
+		hex += 10;
+	}
+	return hex;
+}
+
+char charsToHex(char c1, char c2)
+{
+	char hex1 = charToHex(c1);
+	char hex2 = charToHex(c2);
+	return (hex1 << 4) + hex2;
 }

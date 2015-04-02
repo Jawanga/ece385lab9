@@ -1,32 +1,70 @@
 #include "AES.h"
 #include "keyexpansion.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
 	int Nk = 4;
 	int Nb = 4;
 	int Nr = 10;
-	unsigned char key[16] = {0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F};
-	//unsigned char key[16] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-	unsigned char decrypted_message[16] = { 0xEC, 0xE2, 0x98, 0xDC, 0xEC, 0xE2, 0x98, 0xDC, 0xEC, 0xE2, 0x98, 0xDC, 0xEC, 0xE2, 0x98, 0xDC };
+	unsigned char key[33];
+	unsigned char decrypted_message[33];
 	unsigned char encrypted_message[16];
+	unsigned char key_test[32];
+	unsigned char decrypted_message_test[32];
+	unsigned char pairs[16];
+	unsigned char key_pairs[16];
+	unsigned char pairs_hex[16];
+	unsigned char key_pairs_hex[16];
 	unsigned long key_expansion[44];
 	unsigned char test[4] = { 0xdb, 0x13, 0x53, 0x45 };
-	int k;
+	int i, k;
+
+	/*
 	for (k = 0; k < 4; k++)
 	{
-		printf("%x", test[k]);
+	printf("%x", test[k]);
 	}
 	printf("\n");
 	MixColumns(test);
 	for (k = 0; k < 4; k++)
 	{
-		printf("%x", test[k]);
+	printf("%x", test[k]);
 	}
 	printf("\n");
-	KeyExpansion(key, key_expansion, Nk);
-	int j;
+	*/
+
 	/*
+	printf("Enter Decrypted Message: ");
+	scanf("%s", &decrypted_message_test);
+	printf("\n");
+	printf("Enter Key: ");
+	scanf("%s", &key_test);
+
+	for (i = 0; i < 16; i++)
+	{
+		pairs_hex[i] = charsToHex(decrypted_message_test[2*i], decrypted_message_test[2*i + 1]);
+	}
+
+	for (i = 0; i < 16; i++)
+	{
+		key_pairs_hex[i] = charsToHex(key_test[2*i], key_test[2*i + 1]);
+	}
+	
+	for (i = 0; i < 16; i++)
+	{
+		printf("%x", pairs_hex[i]);
+	}
+	printf("\n");
+	for (i = 0; i < 16; i++)
+	{
+		printf("%x", key_pairs_hex[i]);
+	}
+	printf("\n");
+	*/
+
+	/*
+	int j;
 	for (j = 0; j < 4; j++) {
 		printf("%x", key_expansion[j]);
 	}
@@ -72,8 +110,25 @@ int main() {
 	}
 	printf("\n");
 	*/
-	AES(decrypted_message, encrypted_message, key_expansion);
-	int i;
+	printf("Enter Decrypted Message: ");
+	scanf("%s", &decrypted_message);
+	printf("\n");
+	printf("Enter Key: ");
+	scanf("%s", &key);
+
+	for (i = 0; i < 16; i++)
+	{
+		pairs_hex[i] = charsToHex(decrypted_message[2 * i], decrypted_message[2 * i + 1]);
+	}
+
+	for (i = 0; i < 16; i++)
+	{
+		key_pairs_hex[i] = charsToHex(key[2 * i], key[2 * i + 1]);
+	}
+	
+	KeyExpansion(key_pairs_hex, key_expansion, Nk);
+
+	AES(pairs_hex, encrypted_message, key_expansion);
 	for (i = 0; i < 16; i++)
 	{
 		printf("%x", encrypted_message[i]);
