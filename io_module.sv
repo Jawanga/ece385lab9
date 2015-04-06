@@ -52,7 +52,7 @@ module io_module (		input			 		clk,
 					READ_MSG_1: begin
 						msg_en[119:112] <= to_hw_port[7:0];
 					end
-					READ_MSG_2: begin									//I completed the rest of the states here
+					READ_MSG_2: begin									//I completed the READ_MSG states here, other states need to be done
 						msg_en[111:104] <= to_hw_port[7:0];
 					end
 					READ_MSG_3: begin
@@ -116,7 +116,7 @@ module io_module (		input			 		clk,
 						next_state = SEND_TO_AES;
 				end
 				
-				READ_MSG_0: begin
+				READ_MSG_0: begin									//I finished READ_MSG and ACK_MSG, rest still needs to be done
 					if (to_hw_sig == 2'd2)
 						next_state = ACK_MSG_0;
 				end
