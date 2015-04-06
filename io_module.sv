@@ -52,7 +52,48 @@ module io_module (		input			 		clk,
 					READ_MSG_1: begin
 						msg_en[119:112] <= to_hw_port[7:0];
 					end
-					
+					READ_MSG_2: begin									//I completed the rest of the states here
+						msg_en[111:104] <= to_hw_port[7:0];
+					end
+					READ_MSG_3: begin
+						msg_en[103:96] <= to_hw_port[7:0];
+					end
+					READ_MSG_4: begin
+						msg_en[95:88] <= to_hw_port[7:0];
+					end
+					READ_MSG_5: begin
+						msg_en[87:80] <= to_hw_port[7:0];
+					end
+					READ_MSG_6: begin
+						msg_en[79:72] <= to_hw_port[7:0];
+					end
+					READ_MSG_7: begin
+						msg_en[71:64] <= to_hw_port[7:0];
+					end
+					READ_MSG_8: begin
+						msg_en[63:56] <= to_hw_port[7:0];
+					end
+					READ_MSG_9: begin
+						msg_en[55:48] <= to_hw_port[7:0];
+					end
+					READ_MSG_10: begin
+						msg_en[47:40] <= to_hw_port[7:0];
+					end
+					READ_MSG_11: begin
+						msg_en[39:32] <= to_hw_port[7:0];
+					end
+					READ_MSG_12: begin
+						msg_en[31:24] <= to_hw_port[7:0];
+					end
+					READ_MSG_13: begin
+						msg_en[23:16] <= to_hw_port[7:0];
+					end
+					READ_MSG_14: begin
+						msg_en[15:8] <= to_hw_port[7:0];
+					end
+					READ_MSG_15: begin
+						msg_en[7:0] <= to_hw_port[7:0];
+					end
 					// TODO
 					
 				endcase
@@ -85,6 +126,76 @@ module io_module (		input			 		clk,
 						next_state = ACK_MSG_1;
 				end
 				
+				READ_MSG_2: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_2;
+				end
+				
+				READ_MSG_3: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_3;
+				end
+				
+				READ_MSG_4: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_4;
+				end
+				
+				READ_MSG_5: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_5;
+				end
+				
+				READ_MSG_6: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_6;
+				end
+				
+				READ_MSG_7: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_7;
+				end
+				
+				READ_MSG_8: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_8;
+				end
+				
+				READ_MSG_9: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_9;
+				end
+				
+				READ_MSG_10: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_10;
+				end
+				
+				READ_MSG_11: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_11;
+				end
+				
+				READ_MSG_12: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_12;
+				end
+				
+				READ_MSG_13: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_13;
+				end
+				
+				READ_MSG_14: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_14;
+				end
+				
+				READ_MSG_15: begin
+					if (to_hw_sig == 2'd2)
+						next_state = ACK_MSG_15;
+				end
+				
 				ACK_MSG_0: begin
 					if (to_hw_sig == 2'd1)
 						next_state = READ_MSG_1;
@@ -93,6 +204,76 @@ module io_module (		input			 		clk,
 				ACK_MSG_1: begin
 					if (to_hw_sig == 2'd1)
 						next_state = READ_MSG_2;
+				end
+				
+				ACK_MSG_2: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_3;
+				end
+				
+				ACK_MSG_3: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_4;
+				end
+				
+				ACK_MSG_4: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_5;
+				end
+				
+				ACK_MSG_5: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_6;
+				end
+				
+				ACK_MSG_6: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_7;
+				end
+				
+				ACK_MSG_7: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_8;
+				end
+				
+				ACK_MSG_8: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_9;
+				end
+				
+				ACK_MSG_9: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_10;
+				end
+				
+				ACK_MSG_10: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_11;
+				end
+				
+				ACK_MSG_11: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_12;
+				end
+				
+				ACK_MSG_12: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_13;
+				end
+				
+				ACK_MSG_13: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_14;
+				end
+				
+				ACK_MSG_14: begin
+					if (to_hw_sig == 2'd1)
+						next_state = READ_MSG_15;
+				end
+				
+				ACK_MSG_15: begin
+					if (to_hw_sig == 2'd0)
+						next_state = WAIT;
 				end
 				
 				// TODO
