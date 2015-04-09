@@ -5,8 +5,6 @@
  *      Author: jwang118
  */
 
-#ifndef KEYEXPANSION_H_
-#define KEYEXPANSION_H_
 
 #ifndef KEYEXPANSION_H_
 #define KEYEXPANSION_H_
@@ -17,5 +15,3 @@ unsigned long RotWord(unsigned long word);
 
 #endif /* KEYEXPANSION_H_ */
 
-
-#endif /* KEYEXPANSION_H_ */

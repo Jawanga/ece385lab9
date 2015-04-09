@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="36" version="2.0">
+<workbench progressCount="35" version="2.0">
 <workbenchAdvisor/>
 <window height="1040" width="960" x="960" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -38,21 +38,21 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="U:/ECE385/ece385lab9/trunk/software/lab9_app/main.c" title="main.c" tooltip="lab9_app/main.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="U:/ECE385/ece385lab9/trunk/software/lab9_app/main.c" title="main.c" tooltip="lab9_app/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab9_app/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2290" selectionTopPixel="1446"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3328" selectionTopPixel="1791"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="keyexpansion.c" partName="keyexpansion.c" path="U:/ECE385/ece385lab9/trunk/software/lab9_app/keyexpansion.c" title="keyexpansion.c" tooltip="lab9_app/keyexpansion.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab9_app/keyexpansion.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2227" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2227" selectionTopPixel="1011"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="keyexpansion.h" partName="keyexpansion.h" path="U:/ECE385/ece385lab9/trunk/software/lab9_app/keyexpansion.h" title="keyexpansion.h" tooltip="lab9_app/keyexpansion.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab9_app/keyexpansion.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="307" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="141" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="AES.c" partName="AES.c" path="U:/ECE385/ece385lab9/trunk/software/lab9_app/AES.c" title="AES.c" tooltip="lab9_app/AES.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="AES.c" partName="AES.c" path="U:/ECE385/ece385lab9/trunk/software/lab9_app/AES.c" title="AES.c" tooltip="lab9_app/AES.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab9_app/AES.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2966" selectionTopPixel="2331"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3769" selectionTopPixel="1740"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="AES.h" partName="AES.h" path="U:/ECE385/ece385lab9/trunk/software/lab9_app/AES.h" title="AES.h" tooltip="lab9_app/AES.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab9_app/AES.h"/>
@@ -69,11 +69,6 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (82 items)"/>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -102,7 +97,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.altera.sbtgui.ui.cPerspective">
+<perspectives activePart="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" activePerspective="com.altera.sbtgui.ui.cPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -305,162 +300,166 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/keyexpansion.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/keyexpansion.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/AES.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/AES.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/keyexpansion.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/keyexpansion.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/hello_world.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/keyexpansion.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/keyexpansion.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/AES.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/AES.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab9_app/AES.c"/>
 </editors>
-<item historyLabel="keyexpansion.h" index="2">
-<position info="not_deleted" x="307" y="0"/>
-</item>
-<item historyLabel="keyexpansion.c" index="1">
-<position info="not_deleted" x="2227" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2674" y="447"/>
-</item>
-<item historyLabel="AES.c" index="3">
-<position/>
-</item>
-<item historyLabel="AES.h" index="4">
-<position info="not_deleted" x="524" y="0"/>
-</item>
-<item historyLabel="AES.c" index="3">
-<position info="not_deleted" x="5277" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1999" y="0"/>
-</item>
-<item historyLabel="AES.c" index="3">
-<position info="not_deleted" x="5277" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2590" y="0"/>
-</item>
-<item historyLabel="AES.c" index="3">
-<position info="not_deleted" x="5277" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="406" y="0"/>
-</item>
-<item historyLabel="AES.c" index="3">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="406" y="0"/>
-</item>
-<item historyLabel="keyexpansion.c" index="5">
-<position info="not_deleted" x="2227" y="0"/>
-</item>
-<item historyLabel="AES.c" index="3">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2590" y="0"/>
-</item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="2592" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2472" y="0"/>
-</item>
-<item historyLabel="AES.c" index="3">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2592" y="0"/>
-</item>
-<item historyLabel="keyexpansion.c" index="5">
+<item historyLabel="keyexpansion.c" index="3">
 <position info="not_deleted" x="2227" y="0"/>
 </item>
-<item historyLabel="AES.c" index="3">
+<item historyLabel="AES.c" index="1">
 <position/>
 </item>
 <item historyLabel="main.c" index="0">
 <position/>
 </item>
-<item historyLabel="AES.c" index="3">
+<item historyLabel="AES.c" index="1">
 <position/>
 </item>
 <item historyLabel="main.c" index="0">
 <position/>
 </item>
-<item historyLabel="AES.h" index="4">
+<item historyLabel="AES.h" index="2">
 <position info="not_deleted" x="524" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="2592" y="0"/>
 </item>
-<item historyLabel="keyexpansion.c" index="5">
+<item historyLabel="keyexpansion.c" index="3">
 <position info="not_deleted" x="2227" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="2312" y="0"/>
 </item>
-<item historyLabel="keyexpansion.c" index="5">
+<item historyLabel="keyexpansion.c" index="3">
 <position info="not_deleted" x="2227" y="0"/>
 </item>
-<item historyLabel="keyexpansion.h" index="6">
+<item historyLabel="keyexpansion.h" index="4">
 <position info="not_deleted" x="307" y="0"/>
 </item>
-<item historyLabel="AES.c" index="3">
+<item historyLabel="AES.c" index="1">
 <position/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="2592" y="0"/>
 </item>
-<item historyLabel="keyexpansion.c" index="5">
+<item historyLabel="keyexpansion.c" index="3">
 <position info="not_deleted" x="2227" y="0"/>
 </item>
-<item historyLabel="keyexpansion.h" index="6">
+<item historyLabel="keyexpansion.h" index="4">
 <position info="not_deleted" x="307" y="0"/>
 </item>
-<item historyLabel="AES.c" index="3">
+<item historyLabel="AES.c" index="1">
 <position info="not_deleted" x="1873" y="2"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="2690" y="0"/>
 </item>
-<item historyLabel="AES.c" index="3">
+<item historyLabel="AES.c" index="1">
 <position info="not_deleted" x="4570" y="0"/>
 </item>
-<item historyLabel="AES.h" index="4">
+<item historyLabel="AES.h" index="2">
 <position info="not_deleted" x="403" y="0"/>
 </item>
-<item historyLabel="AES.c" index="3">
+<item historyLabel="AES.c" index="1">
 <position info="not_deleted" x="4345" y="0"/>
 </item>
-<item historyLabel="AES.h" index="4">
+<item historyLabel="AES.h" index="2">
 <position info="not_deleted" x="403" y="0"/>
 </item>
-<item historyLabel="AES.c" index="3">
+<item historyLabel="AES.c" index="1">
 <position info="not_deleted" x="4562" y="0"/>
 </item>
-<item historyLabel="AES.h" index="4">
+<item historyLabel="AES.h" index="2">
 <position info="not_deleted" x="403" y="0"/>
 </item>
-<item historyLabel="AES.c" index="3">
+<item historyLabel="AES.c" index="1">
 <position info="not_deleted" x="2966" y="0"/>
 </item>
-<item historyLabel="keyexpansion.c" index="5">
+<item historyLabel="keyexpansion.c" index="3">
 <position info="not_deleted" x="2227" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="0">
+<item historyLabel="main.c" index="0">
 <position info="not_deleted" x="2690" y="0"/>
+</item>
+<item historyLabel="hello_world.c" index="5">
+<position info="not_deleted" x="2148" y="72"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3255" y="0"/>
+</item>
+<item historyLabel="keyexpansion.c" index="6">
+<position info="not_deleted" x="2227" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2213" y="0"/>
+</item>
+<item historyLabel="keyexpansion.c" index="6">
+<position info="not_deleted" x="2227" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2213" y="0"/>
+</item>
+<item historyLabel="keyexpansion.h" index="7">
+<position info="not_deleted" x="89" y="0"/>
+</item>
+<item historyLabel="keyexpansion.c" index="6">
+<position info="not_deleted" x="2227" y="0"/>
+</item>
+<item historyLabel="keyexpansion.h" index="7">
+<position info="not_deleted" x="89" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="715" y="0"/>
+</item>
+<item historyLabel="keyexpansion.h" index="7">
+<position info="not_deleted" x="89" y="0"/>
+</item>
+<item historyLabel="AES.c" index="8">
+<position info="not_deleted" x="2966" y="0"/>
+</item>
+<item historyLabel="AES.h" index="9">
+<position info="not_deleted" x="403" y="0"/>
+</item>
+<item historyLabel="keyexpansion.h" index="7">
+<position info="not_deleted" x="141" y="0"/>
+</item>
+<item historyLabel="AES.h" index="9">
+<position info="not_deleted" x="403" y="0"/>
+</item>
+<item historyLabel="keyexpansion.h" index="7">
+<position info="not_deleted" x="141" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="715" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2630" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3372" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3583" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3585" y="0"/>
+</item>
+<item active="true" historyLabel="AES.c" index="10">
+<position info="not_deleted" x="2966" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -480,6 +479,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hello_world.c" tooltip="lab9_app/hello_world.c">
+<persistable path="/lab9_app/hello_world.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="AES.h" tooltip="lab9_app/AES.h">
 <persistable path="/lab9_app/AES.h"/>
 </file>
@@ -491,9 +493,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="keyexpansion.c" tooltip="lab9_app/keyexpansion.c">
 <persistable path="/lab9_app/keyexpansion.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hello_world.c" tooltip="lab9_app/hello_world.c">
-<persistable path="/lab9_app/hello_world.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="lab9_app/main.c">
 <persistable path="/lab9_app/main.c"/>

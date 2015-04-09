@@ -1,11 +1,67 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="lab9">
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|lab9_soc:NiosII|lab9_soc_jtag_uart_0:jtag_uart_0|lab9_soc_jtag_uart_0_scfifo_w:the_lab9_soc_jtag_uart_0_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_jr21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing1|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|lab9_soc:NiosII|lab9_soc_nios2_qsys_0:nios2_qsys_0|lab9_soc_nios2_qsys_0_register_bank_a_module:lab9_soc_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_e1h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_6|SubBytes:subbytes_3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_7|SubBytes:subbytes_2|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_8|SubBytes:subbytes_1|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_9|SubBytes:subbytes_0|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|lab9_soc:NiosII|lab9_soc_jtag_uart_0:jtag_uart_0|lab9_soc_jtag_uart_0_scfifo_w:the_lab9_soc_jtag_uart_0_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_jr21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_0|SubBytes:subbytes_3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_1|SubBytes:subbytes_2|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_2|SubBytes:subbytes_1|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_3|SubBytes:subbytes_0|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_8|SubBytes:subbytes_3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_9|SubBytes:subbytes_2|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|lab9_soc:NiosII|lab9_soc_nios2_qsys_0:nios2_qsys_0|lab9_soc_nios2_qsys_0_nios2_oci:the_lab9_soc_nios2_qsys_0_nios2_oci|lab9_soc_nios2_qsys_0_nios2_ocimem:the_lab9_soc_nios2_qsys_0_nios2_ocimem|lab9_soc_nios2_qsys_0_ociram_sp_ram_module:lab9_soc_nios2_qsys_0_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_1891.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|lab9_soc:NiosII|lab9_soc_nios2_qsys_0:nios2_qsys_0|lab9_soc_nios2_qsys_0_register_bank_b_module:lab9_soc_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_f1h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing2|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|lab9_soc:NiosII|lab9_soc_jtag_uart_0:jtag_uart_0|lab9_soc_jtag_uart_0_scfifo_r:the_lab9_soc_jtag_uart_0_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_jr21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_0|SubBytes:subbytes_2|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_1|SubBytes:subbytes_1|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_2|SubBytes:subbytes_0|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_7|SubBytes:subbytes_3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_8|SubBytes:subbytes_2|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_9|SubBytes:subbytes_1|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|lab9_soc:NiosII|lab9_soc_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_noc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing4|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_1|SubBytes:subbytes_3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_2|SubBytes:subbytes_2|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_3|SubBytes:subbytes_1|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_4|SubBytes:subbytes_0|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_9|SubBytes:subbytes_3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing5|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_2|SubBytes:subbytes_3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_3|SubBytes:subbytes_2|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_4|SubBytes:subbytes_1|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_5|SubBytes:subbytes_0|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing6|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_3|SubBytes:subbytes_3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_4|SubBytes:subbytes_2|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_5|SubBytes:subbytes_1|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_6|SubBytes:subbytes_0|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing7|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_4|SubBytes:subbytes_3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_5|SubBytes:subbytes_2|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_6|SubBytes:subbytes_1|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_7|SubBytes:subbytes_0|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_5|SubBytes:subbytes_3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_6|SubBytes:subbytes_2|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_7|SubBytes:subbytes_1|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_8|SubBytes:subbytes_0|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing8|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_0|SubBytes:subbytes_0|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing9|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_0|SubBytes:subbytes_1|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|KeyExpansion:keyexpansion_0|KeyExpansionOne:key_1|SubBytes:subbytes_0|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_8o61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing10|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing11|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing12|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing13|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing14|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing15|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab9|aes_controller:aes_controller0|invAES:invaes0|InvSubBytes:subbing16|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_a471.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

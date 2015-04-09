@@ -2,7 +2,7 @@
 #include "keyexpansion.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+/*
 int main() {
 	int Nk = 4;
 	int Nb = 4;
@@ -10,105 +10,11 @@ int main() {
 	unsigned char key[33];
 	unsigned char decrypted_message[33];
 	unsigned char encrypted_message[16];
-	//unsigned char key_test[32];
-	//unsigned char decrypted_message_test[32];
-	//unsigned char pairs[16];
-	//unsigned char key_pairs[16];
 	unsigned char pairs_hex[16];
 	unsigned char key_pairs_hex[16];
 	unsigned long key_expansion[44];
 	int i, k;
 
-	/*
-	for (k = 0; k < 4; k++)
-	{
-	printf("%x", test[k]);
-	}
-	printf("\n");
-	MixColumns(test);
-	for (k = 0; k < 4; k++)
-	{
-	printf("%x", test[k]);
-	}
-	printf("\n");
-	*/
-
-	/*
-	printf("Enter Decrypted Message: ");
-	scanf("%s", &decrypted_message_test);
-	printf("\n");
-	printf("Enter Key: ");
-	scanf("%s", &key_test);
-
-	for (i = 0; i < 16; i++)
-	{
-		pairs_hex[i] = charsToHex(decrypted_message_test[2*i], decrypted_message_test[2*i + 1]);
-	}
-
-	for (i = 0; i < 16; i++)
-	{
-		key_pairs_hex[i] = charsToHex(key_test[2*i], key_test[2*i + 1]);
-	}
-
-	for (i = 0; i < 16; i++)
-	{
-		printf("%x", pairs_hex[i]);
-	}
-	printf("\n");
-	for (i = 0; i < 16; i++)
-	{
-		printf("%x", key_pairs_hex[i]);
-	}
-	printf("\n");
-	*/
-
-	/*
-	int j;
-	for (j = 0; j < 4; j++) {
-		printf("%x", key_expansion[j]);
-	}
-	printf("\n");
-	for (j = 4; j < 8; j++) {
-		printf("%x", key_expansion[j]);
-	}
-	printf("\n");
-	for (j = 8; j < 12; j++) {
-		printf("%x", key_expansion[j]);
-	}
-	printf("\n");
-	for (j = 12; j < 16; j++) {
-		printf("%x", key_expansion[j]);
-	}
-	printf("\n");
-	for (j = 16; j < 20; j++) {
-		printf("%x", key_expansion[j]);
-	}
-	printf("\n");
-	for (j = 20; j < 24; j++) {
-		printf("%x", key_expansion[j]);
-	}
-	printf("\n");
-	for (j = 24; j < 28; j++) {
-		printf("%x", key_expansion[j]);
-	}
-	printf("\n");
-	for (j = 28; j < 32; j++) {
-		printf("%x", key_expansion[j]);
-	}
-	printf("\n");
-	for (j = 32; j < 36; j++) {
-		printf("%x", key_expansion[j]);
-	}
-	printf("\n");
-	for (j = 36; j < 40; j++) {
-		printf("%x", key_expansion[j]);
-	}
-	printf("\n");
-	for (j = 40; j < 44; j++) {
-		printf("%x", key_expansion[j]);
-	}
-	printf("\n");
-	*/
 	printf("Enter Decrypted Message: ");
 	scanf("%s", &decrypted_message);
 
@@ -140,3 +46,125 @@ int main() {
 	printf("done\n");
 	return 0;
 }
+*/
+
+#define to_hw_port (volatile char*) 0x00000050 // actual address here
+#define to_hw_sig (volatile char*) 0x00000040 // actual address here
+#define to_sw_port (char*) 0x00000030 // actual address here
+#define to_sw_sig (char*) 0x00000020 // actual address here
+
+// TODO: AES Encryption related function calls
+
+int main()
+{
+	int i;
+	int Nk = 4;
+	unsigned char plaintext[32];
+	unsigned char key[32];
+	unsigned char str[16];
+	unsigned char encrypted_message[16];
+	unsigned char pairs_hex[16];
+	unsigned char key_pairs_hex[16];
+	unsigned long key_expansion[44];
+
+	// Start with pressing reset
+	*to_hw_sig = 0;
+	*to_hw_port = 0;
+	printf("Press reset!\n");
+	while (*to_sw_sig != 3);
+
+	while (1)
+	{
+		*to_hw_sig = 0;
+		printf("\n");
+
+		printf("\nEnter plain text:\n");
+		scanf ("%s", plaintext);
+		printf ("\n");
+		printf("\nEnter key:\n");
+		scanf ("%s", key);
+		printf ("\n");
+
+		// TODO: Key Expansion and AES encryption using week 1's AES algorithm.
+
+		for (i = 0; i < 16; i++)
+		{
+			pairs_hex[i] = charsToHex(plaintext[2 * i], plaintext[2 * i + 1]);
+		}
+
+		for (i = 0; i < 16; i++)
+		{
+			key_pairs_hex[i] = charsToHex(key[2 * i], key[2 * i + 1]);
+		}
+
+		KeyExpansion(key_pairs_hex, key_expansion, Nk);
+
+		AES(pairs_hex, encrypted_message, key_expansion);
+		
+		// TODO: display the encrypted message.
+		printf("\nEncrypted message is\n");
+
+		for (i = 0; i < 16; i++)
+		{
+			printf("%02x", encrypted_message[i]);
+		}
+		printf("\n");
+		
+		// Transmit encrypted message to hardware side for decryption. 
+		printf("\nTransmitting message...\n");
+
+		for (i = 0; i < 16; i++)
+		{
+			*to_hw_sig = 1;
+			*to_hw_port = encrypted_message[i]; // encryptedMsg is your encrypted message
+			// Consider to use charToHex() if your encrypted message is a string. 
+			while (*to_sw_sig != 1);
+			*to_hw_sig = 2;
+			while (*to_sw_sig != 0);
+		}
+		*to_hw_sig = 0;
+		
+		// Transmit encrypted message to hardware side for decryption. 
+		printf("\nTransmitting key...\n");
+
+		for (i = 0; i < 16; i++)
+		{
+			*to_hw_sig = 1;
+			*to_hw_port = key_pairs_hex[i]; // encryptedMsg is your encrypted message
+			// Consider to use charToHex() if your encrypted message is a string. 
+			while (*to_sw_sig != 1);
+			*to_hw_sig = 2;
+			while (*to_sw_sig != 0);
+		}
+		*to_hw_sig = 0;
+		//TODO: Transmit key
+
+		printf("\n\n");
+
+		*to_hw_sig = 3;
+		while (*to_sw_sig != 2);
+		printf("\nRetrieving message...\n");
+		for (i = 0; i < 16; ++i)
+		{
+			*to_hw_sig = 1;
+			while (*to_sw_sig != 1);
+			str[i] = *to_sw_port;
+			*to_hw_sig = 2;
+			while (*to_sw_sig != 0);
+		}
+
+		printf("\n\n");
+
+		printf("Decoded message:\n");
+
+		for (i = 0; i < 16; i++)
+		{
+			printf("%02x", str[i]);
+		}
+		printf("\n");
+		// TODO: print decoded message
+	}
+
+	return 0;
+}
+
