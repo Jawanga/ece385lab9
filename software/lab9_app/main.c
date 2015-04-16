@@ -129,19 +129,18 @@ int main()
 
 		for (i = 0; i < 16; i++)
 		{
-			*to_hw_sig = 1;
+			*to_hw_sig = 2;
 			*to_hw_port = key_pairs_hex[i]; // encryptedMsg is your encrypted message
 			// Consider to use charToHex() if your encrypted message is a string. 
 			while (*to_sw_sig != 1);
-			*to_hw_sig = 2;
+			*to_hw_sig = 1;
 			while (*to_sw_sig != 0);
 		}
-		*to_hw_sig = 0;
+		*to_hw_sig = 3;
 		//TODO: Transmit key
 
 		printf("\n\n");
 
-		*to_hw_sig = 3;
 		while (*to_sw_sig != 2);
 		printf("\nRetrieving message...\n");
 		for (i = 0; i < 16; ++i)

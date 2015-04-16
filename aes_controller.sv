@@ -13,9 +13,9 @@ module aes_controller(
 				input					reset_n,
 				input	[127:0]			msg_en,
 				input	[127:0]			key,
-				output  [127:0]			msg_de,
+				output logic [127:0]			msg_de,
 				input					io_ready,
-				output					aes_ready
+				output logic					aes_ready
 			    );
 
 enum logic [1:0] {WAIT, COMPUTE, READY} state, next_state;

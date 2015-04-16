@@ -18,7 +18,7 @@ module io_module (		input			 		clk,
 						output logic [127:0] 	msg_en,
 						output logic [127:0] 	key,
 						input [127:0] 			msg_de,
-						output					io_ready,
+						output logic					io_ready,
 						input					aes_ready
 						);
 	

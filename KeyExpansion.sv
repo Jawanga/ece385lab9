@@ -10,7 +10,7 @@
 
 module KeyExpansion (input clk,
 							input	[0:127]	Cipherkey, 
-							output [0:1407] KeySchedule );
+							output logic [0:1407] KeySchedule );
 	
 	// Rcon table
 	const byte unsigned Rcon [0:9] = '{ 8'h01,8'h02,8'h04,8'h08,8'h10,

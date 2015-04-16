@@ -21,8 +21,8 @@
 	module  invAES (input				clk, Reset, Run,
 						 input	[127:0]	Ciphertext,
 						 input 	[127:0]  Cipherkey,
-						 output	[127:0]	Plaintext,
-						 output				Ready);					 
+						 output	logic [127:0]	Plaintext,
+						 output	logic 			Ready);					 
 					 
 	logic [0:1407] keyschedule;
 	enum logic [6:0] {WAIT, FINISH, 
@@ -565,11 +565,8 @@
 		addkey = addkey;
 		mix_out = mix_out;
 		mixin = mixin;
-		mixout = mixout;
 		shift_in = shift_in;
-		shift_out = shift_out;
 		sub_in = sub_in;
-		sub_out = sub_out;
 		case (state)
 			INV_ADDROUND1: begin
 				add_in = Ciphertext;
